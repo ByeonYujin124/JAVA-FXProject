@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane prefHeight="600.0" prefWidth="727.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.dimigo.gui.project.Controller">
+   <children>
+      <ComboBox fx:id="cbSearch" layoutX="264.0" layoutY="48.0" prefHeight="26.0" prefWidth="158.0" style="-fx-background-color: #85b8cb;" />
+      <TextField fx:id="txtSearch" layoutX="434.0" layoutY="48.0" style="-fx-border-color: #85b8cb;" />
+      <Button fx:id="btnSearch" layoutX="615.0" layoutY="46.0" mnemonicParsing="false" onAction="#handleSearchAction" prefHeight="30.0" prefWidth="76.0" style="-fx-background-color: #1d6a96;" text="SEARCH" textFill="WHITE">
+         <font>
+            <Font name="SpoqaHanSans-Regular" size="13.0" />
+         </font></Button>
+      <TableView fx:id="bookTableView" layoutX="32.0" layoutY="100.0" onMouseClicked="#handleBookAction" prefHeight="215.0" prefWidth="662.0" visible="false">
+        <columns>
+          <TableColumn prefWidth="191.20001220703125" text="책제목" />
+          <TableColumn prefWidth="110.4000244140625" text="작가명" />
+            <TableColumn minWidth="8.7999267578125" prefWidth="52.79998779296875" text="가격" />
+            <TableColumn prefWidth="140.79998779296875" text="링크" />
+        </columns>
+      </TableView>
+      <TableView fx:id="movieTableView" layoutX="32.0" layoutY="100.0" onMouseClicked="#handleMovieAction" prefHeight="215.0" prefWidth="662.0" visible="false">
+         <columns>
+            <TableColumn prefWidth="191.20001220703125" text="영화명" />
+            <TableColumn prefWidth="110.4000244140625" text="감독명" />
+            <TableColumn minWidth="8.7999267578125" prefWidth="52.79998779296875" text="개봉년도" />
+            <TableColumn prefWidth="140.79998779296875" text="링크" />
+         </columns>
+      </TableView>
+      <Label fx:id="word" layoutX="61.0" layoutY="100.0" prefHeight="38.0" prefWidth="339.0" textFill="#283b42">
+         <font>
+            <Font name="SpoqaHanSans-Light" size="35.0" />
+         </font>
+      </Label>
+      <WebView fx:id="webView" layoutX="32.0" layoutY="343.0" prefHeight="242.0" prefWidth="662.0" />
+      <Label layoutX="32.0" layoutY="15.0" prefHeight="92.0" prefWidth="238.0" text="REALPEDIA" textFill="#283b42">
+         <font>
+            <Font name="Montserrat Alternates Black Italic" size="33.0" />
+         </font>
+      </Label>
+      <Label fx:id="mean" alignment="TOP_LEFT" layoutX="30.0" layoutY="170.0" prefHeight="170.0" prefWidth="662.0" style="-fx-background-color: transparent;">
+         <font>
+            <Font name="SpoqaHanSans-Light" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="error_msg" alignment="CENTER" prefHeight="38.0" prefWidth="727.0" textAlignment="CENTER" textFill="#d70000" visible="false">
+         <font>
+            <Font name="SpoqaHanSans-Light" size="15.0" />
+         </font>
+      </Label>
+      <MediaView fitHeight="200.0" fitWidth="200.0" layoutX="453.0" layoutY="70.0" />
+   </children>
+</AnchorPane>
